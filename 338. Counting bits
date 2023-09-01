@@ -1,0 +1,16 @@
+///brute solution
+class Solution {
+public:
+    int noOfOneBits(int i){
+        int ans = __builtin_popcount(i);
+        return ans;
+    }
+    vector<int> countBits(int n) {
+        vector<int> answer;
+        for(int i=0;i<=n;i++){
+            int submission = noOfOneBits(i);
+            answer.push_back(submission);
+        }
+        return answer;
+    }
+};
